@@ -153,6 +153,7 @@ install:
 # Perhaps Galaxy's nose egg isn't being fetched?
 
 script:
+ - export GALAXY_TEST_VERBOSE_ERRORS=True
  - python ./scripts/functional_tests.py -v `python tool_list.py Continuous-Integration-Travis`
  - python ./scripts/functional_tests.py -v functional.test_data_managers:TestForDataManagerTool_data_manager_blast_db -data_managers
 
